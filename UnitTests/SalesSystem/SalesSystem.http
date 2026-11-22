@@ -1,0 +1,23 @@
+@SalesSystem_HostAddress = https://localhost:7xxx
+
+### Calculate cart total with tax
+POST {{SalesSystem_HostAddress}}/api/cart/total
+Content-Type: application/json
+
+{
+  "region": "Southeast",
+  "items": [
+    {
+      "name": "Notebook",
+      "unitPrice": 1000.00,
+      "quantity": 1,
+      "isTaxExempt": false
+    },
+    {
+      "name": "Book",
+      "unitPrice": 50.00,
+      "quantity": 2,
+      "isTaxExempt": true
+    }
+  ]
+}
